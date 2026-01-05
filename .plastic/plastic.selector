@@ -1,0 +1,4 @@
+repository "CuriousFinder_Game/CuriousFinder_Game@18967972637734@cloud"
+  path "/"
+    br "/main"
+    co "/main"
