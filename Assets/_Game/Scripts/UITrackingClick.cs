@@ -19,19 +19,21 @@ public class UITrackingClick : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (time > 0) {
+        if (time > 0)
+        {
             time -= Time.deltaTime;
             timer.GetComponent<TextMesh>().text = time.ToString("F2");
 
         }
 
-        if (timeBonusLimit > 0) {
+        if (timeBonusLimit > 0)
+        {
             timeBonusLimit -= Time.deltaTime;
             // Debug.Log(timeBonusLimit);
         }

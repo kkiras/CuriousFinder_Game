@@ -15,6 +15,8 @@ public class BGTrackingClick : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        // TẠM THỜI DISABLE - Đang test item click
+        /*
         // Check click
         bool clicked =
             (Mouse.current != null && Mouse.current.leftButton.wasPressedThisFrame) ||
@@ -32,5 +34,6 @@ public class BGTrackingClick : MonoBehaviour
 
             UITrackingClick.timeBonusLimit = 5f;
         }
+        */
     }
 }
