@@ -495,7 +495,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4857a1a54bea5ee43bd6b1ee347302f0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::HiddenItem
-  relatedText: {fileID: 100084090}
+  itemData: {fileID: 11400000, guid: 5d850c0d688c6a54bb231fd31ee153f8, type: 2}
+  relatedShadow: {fileID: 0}
   relatedTextPos: {fileID: 100084091}
   relatedShadowPos: {fileID: 0}
 --- !u!60 &316151453
@@ -813,7 +814,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4857a1a54bea5ee43bd6b1ee347302f0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::HiddenItem
-  relatedText: {fileID: 1887668066}
+  itemData: {fileID: 11400000, guid: 0b27beed93d32bd4d9f1f0f6f8f83a2b, type: 2}
+  relatedShadow: {fileID: 0}
   relatedTextPos: {fileID: 1887668067}
   relatedShadowPos: {fileID: 0}
 --- !u!60 &385638903
@@ -1074,7 +1076,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4857a1a54bea5ee43bd6b1ee347302f0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::HiddenItem
-  relatedText: {fileID: 1849655779}
+  itemData: {fileID: 11400000, guid: 2466152db6fe557468a971db5147f77d, type: 2}
+  relatedShadow: {fileID: 0}
   relatedTextPos: {fileID: 1849655780}
   relatedShadowPos: {fileID: 0}
 --- !u!60 &752159696
@@ -1349,7 +1352,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cbdf7c4c0c28704ba82709b50289032, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TrackingClick
-  timer: {fileID: 1367255911}
   bonusX2: {fileID: 1190131472}
   bonusX4: {fileID: 1578018651}
   bonusX6: {fileID: 966399618}
@@ -1621,7 +1623,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f0e6fe4fc2224426fb362b3a2615cbe4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GameManager
-  itemsToFind: []
+  timer: {fileID: 1367255911}
+  uiBindings:
+  - data: {fileID: 11400000, guid: 5d850c0d688c6a54bb231fd31ee153f8, type: 2}
+    textMesh: {fileID: 100084092}
+  - data: {fileID: 11400000, guid: 0b27beed93d32bd4d9f1f0f6f8f83a2b, type: 2}
+    textMesh: {fileID: 1887668068}
+  - data: {fileID: 11400000, guid: 2466152db6fe557468a971db5147f77d, type: 2}
+    textMesh: {fileID: 1849655781}
 --- !u!4 &1313525849
 Transform:
   m_ObjectHideFlags: 0

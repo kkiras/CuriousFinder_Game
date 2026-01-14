@@ -24,23 +24,24 @@ public class UIManager : MonoBehaviour
 
     void GenerateShadowList()
     {
-        foreach (var itemData in GameManager.Instance.itemsToFind)
-        {
-            GameObject newSlot = Instantiate(itemSlotPrefab, itemsContainer);
+        // Comment do GameManager không còn sử dụng 
+        // foreach (var itemData in GameManager.Instance.itemsToFind)
+        // {
+        //     GameObject newSlot = Instantiate(itemSlotPrefab, itemsContainer);
 
-            Image icon = newSlot.GetComponent<Image>();
-            icon.sprite = itemData.shadowSprite;
-            icon.preserveAspect = true;
+        //     Image icon = newSlot.GetComponent<Image>();
+        //     icon.sprite = itemData.shadowSprite;
+        //     icon.preserveAspect = true;
 
-            AspectRatioFitter fitter = newSlot.GetComponent<AspectRatioFitter>();
-            if (fitter == null)
-            {
-                fitter = newSlot.AddComponent<AspectRatioFitter>();
-            }
-            fitter.aspectMode = AspectRatioFitter.AspectMode.HeightControlsWidth;
+        //     AspectRatioFitter fitter = newSlot.GetComponent<AspectRatioFitter>();
+        //     if (fitter == null)
+        //     {
+        //         fitter = newSlot.AddComponent<AspectRatioFitter>();
+        //     }
+        //     fitter.aspectMode = AspectRatioFitter.AspectMode.HeightControlsWidth;
 
-            itemMap.Add(itemData, newSlot);
-        }
+        //     itemMap.Add(itemData, newSlot);
+        // }
     }
 
     public void RemoveItemFromUI(HiddenItemData data)

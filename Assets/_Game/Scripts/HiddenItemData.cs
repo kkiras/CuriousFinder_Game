@@ -6,6 +6,5 @@ public class HiddenItemData : ScriptableObject
 {
     public string id;
     public string displayName;
-    public Sprite iconSprite;
-    public Sprite shadowSprite;
+    public int totalRequired;
 }

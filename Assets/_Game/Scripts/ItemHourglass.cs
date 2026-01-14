@@ -30,7 +30,7 @@ public class ItemHourglass : MonoBehaviour
 
             if (hit.collider != null && hit.collider.gameObject == this.gameObject)
             {
-                UITrackingClick.time += 10f;
+                GameManager.time += 10f;
             }
         }
     }

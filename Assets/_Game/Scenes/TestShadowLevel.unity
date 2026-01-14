@@ -509,7 +509,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4857a1a54bea5ee43bd6b1ee347302f0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::HiddenItem
-  relatedText: {fileID: 0}
+  itemData: {fileID: 0}
   relatedShadow: {fileID: 1341889267}
   relatedTextPos: {fileID: 0}
   relatedShadowPos: {fileID: 0}
@@ -688,7 +688,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4857a1a54bea5ee43bd6b1ee347302f0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::HiddenItem
-  relatedText: {fileID: 0}
+  itemData: {fileID: 0}
   relatedShadow: {fileID: 1565758061}
   relatedTextPos: {fileID: 0}
   relatedShadowPos: {fileID: 0}
@@ -780,7 +780,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cbdf7c4c0c28704ba82709b50289032, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TrackingClick
-  timer: {fileID: 1590908574}
   bonusX2: {fileID: 335780847}
   bonusX4: {fileID: 1579498873}
   bonusX6: {fileID: 228353691}
@@ -1199,7 +1198,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4857a1a54bea5ee43bd6b1ee347302f0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::HiddenItem
-  relatedText: {fileID: 0}
+  itemData: {fileID: 0}
   relatedShadow: {fileID: 1594054038}
   relatedTextPos: {fileID: 0}
   relatedShadowPos: {fileID: 0}
@@ -1562,7 +1561,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f0e6fe4fc2224426fb362b3a2615cbe4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GameManager
-  itemsToFind: []
+  timer: {fileID: 1590908574}
+  uiBindings: []
 --- !u!4 &925155849
 Transform:
   m_ObjectHideFlags: 0
@@ -1743,7 +1743,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4857a1a54bea5ee43bd6b1ee347302f0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::HiddenItem
-  relatedText: {fileID: 0}
+  itemData: {fileID: 0}
   relatedShadow: {fileID: 1442953137}
   relatedTextPos: {fileID: 0}
   relatedShadowPos: {fileID: 0}

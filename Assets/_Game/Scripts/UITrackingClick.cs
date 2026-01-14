@@ -4,9 +4,6 @@ using UnityEngine.InputSystem;
 
 public class UITrackingClick : MonoBehaviour
 {
-
-    public static float time = 10f;
-    public Transform timer;
     public static float timeBonusLimit = 0f;
 
     public static int rateBonusScore = 0;
@@ -25,12 +22,7 @@ public class UITrackingClick : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (time > 0)
-        {
-            time -= Time.deltaTime;
-            timer.GetComponent<TextMesh>().text = time.ToString("F2");
 
-        }
 
         if (timeBonusLimit > 0)
         {
