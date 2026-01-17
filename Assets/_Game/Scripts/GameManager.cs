@@ -12,16 +12,18 @@ public class GameManager : MonoBehaviour
     public Transform timer;
     // public static int itemsToFind;
     [System.Serializable]
-    public class ItemUIBinding {
+    public class ItemUIBinding
+    {
         public HiddenItemData data;
         public TextMesh textMesh;
         // Có thể thêm shadow ở đây
-        // public SpriteRenderer shadowRenderer;
+        public SpriteRenderer shadowRenderer;
     }
     public List<ItemUIBinding> uiBindings;
     private Dictionary<string, int> itemsRemaining = new Dictionary<string, int>();
     private Dictionary<string, TextMesh> uiMap = new Dictionary<string, TextMesh>();
     private Dictionary<string, string> nameMap = new Dictionary<string, string>();
+    private Dictionary<string, SpriteRenderer> shadowMap = new Dictionary<string, SpriteRenderer>();
 
     void Awake()
     {
@@ -34,19 +36,21 @@ public class GameManager : MonoBehaviour
             Destroy(gameObject);
         }
 
-        foreach (var binding in uiBindings) {
-            if (binding.data != null) {
+        foreach (var binding in uiBindings)
+        {
+            if (binding.data != null)
+            {
                 string id = binding.data.id;
                 uiMap.Add(id, binding.textMesh);
                 nameMap.Add(id, binding.data.displayName);
-                
+                shadowMap.Add(id, binding.shadowRenderer);
                 itemsRemaining.Add(id, binding.data.totalRequired);
-                
+
                 UpdateItemUI(id);
             }
         }
     }
-    
+
     // Tạm thời comment do dùng logic ở HiddenItem.cs
     // public void OnItemClicked(ClickableItem itemClicked)
     // {
@@ -112,18 +116,22 @@ public class GameManager : MonoBehaviour
 
     public void OnItemCollected(string itemID, HiddenItem itemRef)
     {
-        if (itemsRemaining.ContainsKey(itemID)) {
+        if (itemsRemaining.ContainsKey(itemID))
+        {
             itemsRemaining[itemID]--;
             UpdateItemUI(itemID);
 
-            if (itemsRemaining[itemID] <= 0) {
+            if (itemsRemaining[itemID] <= 0)
+            {
                 Debug.Log("Đã tìm hết loại: " + itemID);
-                
-                if (uiMap.ContainsKey(itemID)) {
+
+                if (uiMap.ContainsKey(itemID))
+                {
                     StartCoroutine(FadeUIText(uiMap[itemID], 0.5f));
                 }
             }
         }
+
         // Xử lý bonus score
         if (UITrackingClick.timeBonusLimit > 0)
         {
@@ -136,7 +144,7 @@ public class GameManager : MonoBehaviour
     IEnumerator FadeUIText(TextMesh textMesh, float duration)
     {
         if (textMesh == null) yield break;
-        
+
         ColorUtility.TryParseHtmlString("#1A0B06", out Color targetColor);
         targetColor.a = 0.5f;
 
@@ -154,14 +162,16 @@ public class GameManager : MonoBehaviour
         textMesh.color = targetColor;
     }
 
-    private void UpdateItemUI(string itemID) {
-        if (uiMap.ContainsKey(itemID) && uiMap[itemID] != null) {
+    private void UpdateItemUI(string itemID)
+    {
+        if (uiMap.ContainsKey(itemID) && uiMap[itemID] != null)
+        {
             int count = itemsRemaining[itemID];
             string dName = nameMap[itemID];
 
-            if (count > 1) 
+            if (count > 1)
                 uiMap[itemID].text = $"{dName} x{count}";
-            else 
+            else
                 uiMap[itemID].text = dName;
 
         }

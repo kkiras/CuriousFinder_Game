@@ -18,7 +18,7 @@ public class HiddenItem : MonoBehaviour
 
         if (relatedShadow != null)
             shadowRenderer = relatedShadow.GetComponent<SpriteRenderer>();
-            
+
     }
 
     void Update()
@@ -44,9 +44,9 @@ public class HiddenItem : MonoBehaviour
 
         else
         {
-            GameManager.Instance.OnItemCollected(itemData.id, this); 
+            GameManager.Instance.OnItemCollected(itemData.id, this);
         }
-        
+
         GetComponent<Collider2D>().enabled = false;
     }
 
